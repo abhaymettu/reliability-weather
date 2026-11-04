@@ -37,7 +37,7 @@
  ],
  "runs_per_task_per_day": 5,
  "statistic": "pass rate over all runs; Wilson 95% interval; day-over-day change by Newcombe's hybrid score interval (PREREGISTRATION.md section 4)",
- "generated_utc": "2026-11-04T07:01:53+00:00",
+ "generated_utc": "2026-11-04T07:02:36+00:00",
  "models": {
   "sonnet": {
    "name": "Claude Sonnet",

@@ -73,6 +73,8 @@ pilot passed 117 of 119 runs, which leaves nothing to measure; how the budget wa
   coding in general.
 - Claude runs through `claude -p`, which adds its own small Haiku call per session; the page reports the model that did
   the work.
+- Claude Code also tells the model its own working directory, which is not the task's folder. In the pilot two Haiku
+  replies used that path and lost a turn to an error; DeepSeek gets no such hint.
 - A model provider can change what a model name serves without notice. The page lists the model ids actually served.
 
 ## License

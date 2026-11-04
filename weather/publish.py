@@ -125,4 +125,5 @@ def build(version: str = "v1") -> dict:
 
 if __name__ == "__main__":
     f = build()
-    print(f"published {len(f['days'])} day(s), latest {f['latest']}")
+    last = f["days"][-1]["models"] if f["days"] else {}
+    print("; ".join(f"{f['models'][m]['name']} {s['passes']}/{s['runs']}" for m, s in last.items()))

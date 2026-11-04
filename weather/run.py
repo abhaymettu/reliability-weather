@@ -65,7 +65,7 @@ class Spend:
         for p in (RUNS / label).glob("*/*/r*.json"):
             r = read_receipt(p)
             if r:
-                self.usd[provider_family(r["model"])] += r.get("cost_usd", 0.0)
+                self.usd[provider_family(r["model"])] += providers.run_cost(r.get("calls", []))
 
     def over(self, family: str) -> bool:
         with self.lock:
@@ -102,7 +102,7 @@ def one_run(label: str, version: str, sha: str, commit: str, task: battery.Task,
                                 "attempts": (old or {}).get("attempts", 0) + 1})
             return "infra_error"
         ok, detail = task.check(work)
-    cost = sum(c.get("cost_usd", 0.0) for c in ep["calls"])
+    cost = providers.run_cost(ep["calls"])
     spend.add(family, cost)
     write_atomic(path, {
         **base, "outcome": "pass" if ok else "fail", "check_detail": detail, "ended": ep["ended"],

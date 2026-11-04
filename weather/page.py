@@ -122,6 +122,18 @@ def headline(feed: dict, day: dict) -> str:
             f"scored anywhere from {pct(ws['one_run_range95'][0])} to {pct(ws['one_run_range95'][1])}.")
 
 
+def readme_block(feed: dict) -> str:
+    day = feed["days"][-1]
+    rows = sorted(day["models"].items(), key=lambda kv: -kv[1]["pass_rate"])
+    lines = [f"**{headline(feed, day)}**", "",
+             "| Model | Pass rate | 95% interval | One run could score | Tasks that flipped |", "| --- | --- | --- | --- | --- |"]
+    for m, s in rows:
+        lines.append(f"| {feed['models'][m]['name']} | {pct(s['pass_rate'])} | {pct_n(s['interval95'][0])} to "
+                     f"{pct_n(s['interval95'][1])} | {pct_n(s['one_run_range95'][0])} to {pct_n(s['one_run_range95'][1])} | "
+                     f"{round(s['flip_rate'] * s['tasks'])} of {s['tasks']} |")
+    return "\n".join(lines)
+
+
 def render(feed: dict) -> str:
     day = feed["days"][-1]
     rows = sorted(day["models"].items(), key=lambda kv: -kv[1]["pass_rate"])
@@ -143,10 +155,11 @@ def render(feed: dict) -> str:
         f"<td>${s['cost_usd_list_price']:.2f}</td></tr>"
         for m, s in rows
     )
-    task_ids = list(rows[0][1]["tasks_detail"])
+    task_ids = feed["task_ids"]
     task_rows = "".join(
         f"<tr><th scope=row><code>{t}</code></th>"
-        + "".join(f"<td>{s['tasks_detail'][t]['passes']}/{s['tasks_detail'][t]['runs']}</td>" for _, s in rows)
+        + "".join(f"<td>{s['tasks_detail'].get(t, {'passes': 0})['passes']}/{s['tasks_detail'].get(t, {'runs': 0})['runs']}</td>"
+                  for _, s in rows)
         + "</tr>"
         for t in task_ids
     )

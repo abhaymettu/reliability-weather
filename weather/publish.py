@@ -3,14 +3,13 @@
 Only folders named as dates count; pilot and other labels never reach the weather. A day is published for a
 model once every task in the battery has the preregistered number of runs with a pass or fail outcome.
 """
-import html
 import json
 import re
 from collections import defaultdict
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
-from . import battery, stats
+from . import battery, providers, stats
 from .run import RUNS, read_receipt
 
 REPO = RUNS.parent
@@ -44,10 +43,12 @@ def collect(label: str) -> dict:
         cat = m["by_cat"][r["category"]]
         cat[0] += r["outcome"] == "pass"
         cat[1] += 1
-        m["cost_usd"] += r["cost_usd"]
+        m["cost_usd"] += providers.run_cost(r.get("calls", []))
         m["turns"].append(r["turns_used"])
         for call in r.get("calls", []):
-            served = call.get("model") or next(iter(call.get("modelUsage") or {}), None)
+            # Claude Code adds one small Haiku call per session for itself; the subject is the most-used model.
+            usage = call.get("modelUsage") or {}
+            served = call.get("model") or max(usage, key=lambda k: usage[k].get("costUSD", 0), default=None)
             if served:
                 m["served"].add(served)
     return out
@@ -97,6 +98,7 @@ def build(version: str = "v1") -> dict:
         "battery": version,
         "battery_sha256": battery.digest(version),
         "tasks": len(task_ids),
+        "task_ids": task_ids,
         "runs_per_task_per_day": N_PER_DAY,
         "statistic": "pass rate over all runs; Wilson 95% interval; day-over-day change by Newcombe's hybrid score "
         "interval (PREREGISTRATION.md section 4)",
@@ -110,9 +112,14 @@ def build(version: str = "v1") -> dict:
     for d in days:
         (DOCS / "days" / f"{d['date']}.json").write_text(json.dumps(d, indent=1) + "\n")
     (DOCS / "feed.json").write_text(json.dumps(feed, indent=1) + "\n")
-    from .page import render
+    from .page import readme_block, render
 
     (DOCS / "index.html").write_text(render(feed))
+    readme = REPO / "README.md"
+    text = readme.read_text()
+    start, end = "<!-- weather:start -->", "<!-- weather:end -->"
+    head, rest = text.split(start, 1)
+    readme.write_text(head + start + "\n" + readme_block(feed) + "\n" + end + rest.split(end, 1)[1])
     return feed
 
 

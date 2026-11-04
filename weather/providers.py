@@ -49,6 +49,7 @@ class Claude:
 
     model: str
     session_id: str | None = None
+    session_cost: float = 0.0
 
     def send(self, system: str, messages: list[dict]) -> tuple[str, dict]:
         prompt = messages[-1]["content"]
@@ -67,13 +68,16 @@ class Claude:
         if env.get("is_error") or env.get("subtype") != "success":
             raise InfraError(f"claude -p error: {env.get('api_error_status')} {str(env.get('result'))[:300]}")
         self.session_id = env["session_id"]
+        # usage is per call, but total_cost_usd and modelUsage add up over the resumed session.
+        cumulative = env.get("total_cost_usd") or 0.0
+        delta, self.session_cost = cumulative - self.session_cost, cumulative
         record = {
             "usage": env.get("usage"),
             "modelUsage": env.get("modelUsage"),
             "total_cost_usd": env.get("total_cost_usd"),
             "session_id": env["session_id"],
             "duration_ms": env.get("duration_ms"),
-            "cost_usd": env.get("total_cost_usd") or 0.0,
+            "cost_usd": delta,
         }
         return env.get("result") or "", record
 
@@ -123,6 +127,14 @@ class OpenAICompatible:
             "cost_usd": deepseek_cost(self.model, usage, at),
         }
         return env["choices"][0]["message"].get("content") or "", record
+
+
+def run_cost(calls: list[dict]) -> float:
+    """List-price cost of one run from its call records. Claude records carry a session total, so the last one is the
+    run's cost; DeepSeek records are per call. Receipts written before the per-call fix only have the totals."""
+    if calls and "total_cost_usd" in calls[-1]:
+        return calls[-1]["total_cost_usd"] or 0.0
+    return sum(c.get("cost_usd", 0.0) for c in calls)
 
 
 def make(name: str):

@@ -57,7 +57,7 @@ footer { margin-top:4rem; font-size:.9rem; color:var(--gray); }
 tool-use tasks 5 times per model every day, through one harness, so the only thing that
 changes between rows is the model. Each run is graded by a deterministic check on the files it leaves behind; no model
 judges another. The battery, the number of runs and the statistics were <a href="https://github.com/abhaymettu/reliability-weather/blob/main/PREREGISTRATION.md">preregistered</a> before the first run.</p>
-<p class=soft>Incomplete today: DeepSeek V4 Pro, DeepSeek Flash (fewer than 5 runs on some task, from the daily cost cap or provider errors). Their numbers are shown but get no change test.</p>
+<p class=soft>Incomplete today: DeepSeek V4 Pro, DeepSeek Flash (fewer than 5 runs on some task, from the daily cost cap or provider errors). Their numbers are shown but get no change test.</p><p class=soft>A harness asymmetry: Claude Code tells Claude models about a working folder and a scratch folder of its own, outside the task. Claude Haiku had a write outside the task refused in 24 runs, 6 of its 7 failures. The write is refused and costs a turn. Battery v1 keeps the harness fixed, so this stays in the numbers; a v2 series would have to take the hint away.</p>
 <figure>
 <svg viewBox="0 0 820 286" role="img" aria-labelledby="f1t f1d" class="fig">
 <title id="f1t">Pass rate today, by model</title>
@@ -173,7 +173,7 @@ from the previous day excludes zero; with four models a day, expect a false alar
 <p>Battery v1, sha256 <code>b407a8cf9f16</code>. Model ids served today: Claude Sonnet: claude-sonnet-5-5; DeepSeek V4 Pro: deepseek-v4-pro; Claude Haiku: claude-haiku-5-5; DeepSeek Flash: deepseek-flash.
 Data: <a href="feed.json">feed.json</a> and one file per day under <a href="https://github.com/abhaymettu/reliability-weather/tree/main/docs/days">days/</a>;
 every run's transcript, usage and check result are in <a href="https://github.com/abhaymettu/reliability-weather/tree/main/runs">runs/</a>.
-Updated 2026-11-04 07:02:36 UTC.
+Updated 2026-11-04 07:04:40 UTC.
 Built by <a href="https://abhaymettu.com">Abhay Mettu</a>, following <a href="https://github.com/abhaymettu/agent-run-reliability">agent-run-reliability</a>.</p>
 </footer>
 </main>

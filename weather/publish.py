@@ -27,7 +27,7 @@ DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 def collect(label: str) -> dict:
     """{model: {"counts": {task: (k, n)}, "cost_usd", "infra_errors", "turns", "versions"}} for one day folder."""
     out = defaultdict(lambda: {"counts": defaultdict(lambda: [0, 0]), "cost_usd": 0.0, "infra_errors": 0,
-                               "turns": [], "served": set(), "battery_sha256": set(), "by_cat": defaultdict(lambda: [0, 0])})
+                               "turns": [], "outside_writes": [0, 0], "served": set(), "battery_sha256": set(), "by_cat": defaultdict(lambda: [0, 0])})
     for p in sorted((RUNS / label).glob("*/*/r*.json")):
         r = read_receipt(p)
         if not r:
@@ -45,6 +45,9 @@ def collect(label: str) -> dict:
         cat[1] += 1
         m["cost_usd"] += providers.run_cost(r.get("calls", []))
         m["turns"].append(r["turns_used"])
+        if any((t["result"] or "").startswith("error: write needs a path inside") for t in r["transcript"]):
+            m["outside_writes"][0] += 1
+            m["outside_writes"][1] += r["outcome"] == "fail"
         for call in r.get("calls", []):
             # Claude Code adds one small Haiku call per session for itself; the subject is the most-used model.
             usage = call.get("modelUsage") or {}
@@ -70,6 +73,8 @@ def day_summary(label: str, task_ids: list[str]) -> dict:
             "mean_turns": sum(m["turns"]) / len(m["turns"]),
             "cost_usd_list_price": round(m["cost_usd"], 4),
             "infra_errors": m["infra_errors"],
+            "runs_with_refused_outside_write": m["outside_writes"][0],
+            "failed_runs_with_refused_outside_write": m["outside_writes"][1],
             "served_model_ids": sorted(m["served"]),
             "battery_sha256": sorted(m["battery_sha256"]),
             "_counts": counts,

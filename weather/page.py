@@ -173,6 +173,15 @@ def render(feed: dict) -> str:
     incomplete = [models[m]["name"] for m, s in rows if not s["complete"]]
     note = (f"<p class=soft>Incomplete today: {', '.join(incomplete)} (fewer than {feed['runs_per_task_per_day']} "
             "runs on some task, from the daily cost cap or provider errors). Their numbers are shown but get no change test.</p>") if incomplete else ""
+    outside = [(models[m]["name"], s) for m, s in rows if s["failed_runs_with_refused_outside_write"]]
+    if outside:
+        note += ("<p class=soft>A harness asymmetry: Claude Code tells Claude models about a working folder and a "
+                 "scratch folder of its own, outside the task. "
+                 + "; ".join(f"{name} had a write outside the task refused in {s['runs_with_refused_outside_write']} runs, "
+                             f"{s['failed_runs_with_refused_outside_write']} of its {s['runs'] - s['passes']} failures"
+                             for name, s in outside)
+                 + ". The write is refused and costs a turn. Battery v1 keeps the harness fixed, so this stays in "
+                 "the numbers; a v2 series would have to take the hint away.</p>")
     return f"""<!doctype html>
 <html lang="en">
 <head>

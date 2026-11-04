@@ -168,6 +168,8 @@
    "mean_turns": 3.7916666666666665,
    "cost_usd_list_price": 0.2736,
    "infra_errors": 0,
+   "runs_with_refused_outside_write": 0,
+   "failed_runs_with_refused_outside_write": 0,
    "served_model_ids": [
     "deepseek-flash"
    ],
@@ -342,6 +344,8 @@
    "mean_turns": 3.831932773109244,
    "cost_usd_list_price": 1.369,
    "infra_errors": 0,
+   "runs_with_refused_outside_write": 0,
+   "failed_runs_with_refused_outside_write": 0,
    "served_model_ids": [
     "deepseek-v4-pro"
    ],
@@ -516,6 +520,8 @@
    "mean_turns": 3.3466666666666667,
    "cost_usd_list_price": 0.1737,
    "infra_errors": 0,
+   "runs_with_refused_outside_write": 24,
+   "failed_runs_with_refused_outside_write": 6,
    "served_model_ids": [
     "claude-haiku-5-5"
    ],
@@ -690,6 +696,8 @@
    "mean_turns": 3.66,
    "cost_usd_list_price": 1.8784,
    "infra_errors": 0,
+   "runs_with_refused_outside_write": 0,
+   "failed_runs_with_refused_outside_write": 0,
    "served_model_ids": [
     "claude-sonnet-5-5"
    ],

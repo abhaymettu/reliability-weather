@@ -91,6 +91,10 @@ Per model per day, over the 30 tasks with n runs each:
   starting runs for the day, which leaves the day incomplete rather than unbalanced.
 - Every call's usage object is stored verbatim in its run receipt.
 
-## 8. Deviations
+## 8. Deviations and observations
 
-None yet.
+No deviations. Observation after the first day (2026-11-04), not a change: `claude -p` tells the model about its own
+working folder and a scratch folder even with the system prompt replaced. Claude Haiku wrote to that scratch folder in
+24 of 150 runs; each such write was refused and cost a turn, and those runs hold 6 of its 7 failures. The analysis is
+unchanged. The publisher counts refused outside writes per model per day so the effect stays visible, and removing the
+hint would start battery v2.

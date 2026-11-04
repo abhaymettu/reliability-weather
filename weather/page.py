@@ -116,10 +116,13 @@ def headline(feed: dict, day: dict) -> str:
     m, s = rows[0]
     wm, ws = widest
     n = feed["runs_per_task_per_day"]
-    return (f"{nice_date(day['date'])}. {feed['models'][m]['name']} passed {pct(s['pass_rate'])} of its "
-            f"{s['runs']} runs (95% interval {pct_n(s['interval95'][0])} to {pct_n(s['interval95'][1])}). "
-            f"Run the same {feed['tasks']} tasks once instead of {n} times and {feed['models'][wm]['name']} could have "
-            f"scored anywhere from {pct(ws['one_run_range95'][0])} to {pct(ws['one_run_range95'][1])}.")
+    first = (f"{nice_date(day['date'])}. {feed['models'][m]['name']} passed {pct(s['pass_rate'])} of its "
+             f"{s['runs']} runs (95% interval {pct_n(s['interval95'][0])} to {pct_n(s['interval95'][1])}).")
+    lo, hi = ws["one_run_range95"]
+    if lo == hi:
+        return first + f" Every task gave the same result on all {n} runs for every model."
+    return (first + f" Run the same {feed['tasks']} tasks once instead of {n} times and "
+            f"{feed['models'][wm]['name']} could have scored anywhere from {pct(lo)} to {pct(hi)}.")
 
 
 def readme_block(feed: dict) -> str:

@@ -172,7 +172,7 @@ def render(feed: dict) -> str:
     served = "; ".join(f"{models[m]['name']}: {', '.join(s['served_model_ids'])}" for m, s in rows)
     incomplete = [models[m]["name"] for m, s in rows if not s["complete"]]
     note = (f"<p class=soft>Incomplete today: {', '.join(incomplete)} (fewer than {feed['runs_per_task_per_day']} "
-            "runs on some task). Its numbers are shown but carry no change test.</p>") if incomplete else ""
+            "runs on some task, from the daily cost cap or provider errors). Their numbers are shown but get no change test.</p>") if incomplete else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>

@@ -9,10 +9,10 @@
  "category": "chore",
  "run": 0,
  "max_turns": 10,
- "started_utc": "2026-11-04T06:20:41+00:00",
+ "started_utc": "2026-11-04T06:32:29+00:00",
  "python": "3.14.7",
  "outcome": "infra_error",
  "error": "claude -p timed out after 300 s",
  "cost_usd": 0.0,
- "attempts": 1
+ "attempts": 3
 }

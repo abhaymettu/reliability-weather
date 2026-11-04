@@ -1,0 +1,701 @@
+{
+ "date": "2026-11-04",
+ "models": {
+  "deepseek-flash": {
+   "tasks": 30,
+   "runs": 120,
+   "passes": 101,
+   "pass_rate": 0.8416666666666667,
+   "interval95": [
+    0.7659066765413198,
+    0.8962302264058994
+   ],
+   "task_bootstrap95": [
+    0.7333333333333333,
+    0.9333333333333333
+   ],
+   "one_run_range95": [
+    0.7333333333333333,
+    0.9333333333333333
+   ],
+   "noise_share": 0.7648080597533438,
+   "flip_rate": 0.36666666666666664,
+   "complete": false,
+   "by_category": {
+    "chore": {
+     "passes": 16,
+     "runs": 24,
+     "pass_rate": 0.6666666666666666
+    },
+    "codefix": {
+     "passes": 30,
+     "runs": 32,
+     "pass_rate": 0.9375
+    },
+    "data": {
+     "passes": 23,
+     "runs": 32,
+     "pass_rate": 0.71875
+    },
+    "implement": {
+     "passes": 32,
+     "runs": 32,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 4,
+     "runs": 4
+    },
+    "chore_circular_import": {
+     "passes": 1,
+     "runs": 4
+    },
+    "chore_rename": {
+     "passes": 4,
+     "runs": 4
+    },
+    "chore_split_module": {
+     "passes": 2,
+     "runs": 4
+    },
+    "chore_tests_green": {
+     "passes": 3,
+     "runs": 4
+    },
+    "chore_version_bump": {
+     "passes": 2,
+     "runs": 4
+    },
+    "data_config_merge": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_dedupe_contacts": {
+     "passes": 1,
+     "runs": 4
+    },
+    "data_find_todos": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_inventory": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_join_orders": {
+     "passes": 3,
+     "runs": 4
+    },
+    "data_log_errors": {
+     "passes": 2,
+     "runs": 4
+    },
+    "data_markdown_table": {
+     "passes": 2,
+     "runs": 4
+    },
+    "data_sales_totals": {
+     "passes": 3,
+     "runs": 4
+    },
+    "fix_bisect": {
+     "passes": 3,
+     "runs": 4
+    },
+    "fix_csv_line": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_days_between": {
+     "passes": 3,
+     "runs": 4
+    },
+    "fix_dedupe": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_flatten": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_median": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_roman": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_word_count": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_balanced": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_duration": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_lru": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_luhn": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_merge_intervals": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_rle": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_semver": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_slugify": {
+     "passes": 4,
+     "runs": 4
+    }
+   },
+   "mean_turns": 3.7916666666666665,
+   "cost_usd_list_price": 0.2736,
+   "infra_errors": 0,
+   "served_model_ids": [
+    "deepseek-flash"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ]
+  },
+  "deepseek-v4-pro": {
+   "tasks": 30,
+   "runs": 119,
+   "passes": 115,
+   "pass_rate": 0.9666666666666667,
+   "interval95": [
+    0.9167514797298497,
+    0.9868522471032992
+   ],
+   "task_bootstrap95": [
+    0.9166666666666666,
+    1.0
+   ],
+   "one_run_range95": [
+    0.9,
+    1.0
+   ],
+   "noise_share": 1.0,
+   "flip_rate": 0.13333333333333333,
+   "complete": false,
+   "by_category": {
+    "chore": {
+     "passes": 21,
+     "runs": 23,
+     "pass_rate": 0.9130434782608695
+    },
+    "codefix": {
+     "passes": 32,
+     "runs": 32,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 30,
+     "runs": 32,
+     "pass_rate": 0.9375
+    },
+    "implement": {
+     "passes": 32,
+     "runs": 32,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 4,
+     "runs": 4
+    },
+    "chore_circular_import": {
+     "passes": 3,
+     "runs": 4
+    },
+    "chore_rename": {
+     "passes": 4,
+     "runs": 4
+    },
+    "chore_split_module": {
+     "passes": 4,
+     "runs": 4
+    },
+    "chore_tests_green": {
+     "passes": 3,
+     "runs": 3
+    },
+    "chore_version_bump": {
+     "passes": 3,
+     "runs": 4
+    },
+    "data_config_merge": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_dedupe_contacts": {
+     "passes": 3,
+     "runs": 4
+    },
+    "data_find_todos": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_inventory": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_join_orders": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_log_errors": {
+     "passes": 4,
+     "runs": 4
+    },
+    "data_markdown_table": {
+     "passes": 3,
+     "runs": 4
+    },
+    "data_sales_totals": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_bisect": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_csv_line": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_days_between": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_dedupe": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_flatten": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_median": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_roman": {
+     "passes": 4,
+     "runs": 4
+    },
+    "fix_word_count": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_balanced": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_duration": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_lru": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_luhn": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_merge_intervals": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_rle": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_semver": {
+     "passes": 4,
+     "runs": 4
+    },
+    "impl_slugify": {
+     "passes": 4,
+     "runs": 4
+    }
+   },
+   "mean_turns": 3.831932773109244,
+   "cost_usd_list_price": 1.369,
+   "infra_errors": 0,
+   "served_model_ids": [
+    "deepseek-v4-pro"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ]
+  },
+  "haiku": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 143,
+   "pass_rate": 0.9533333333333334,
+   "interval95": [
+    0.9068135276008725,
+    0.9772134508387381
+   ],
+   "task_bootstrap95": [
+    0.9,
+    0.9933333333333334
+   ],
+   "one_run_range95": [
+    0.9,
+    1.0
+   ],
+   "noise_share": 0.8931068931068932,
+   "flip_rate": 0.16666666666666666,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 25,
+     "runs": 30,
+     "pass_rate": 0.8333333333333334
+    },
+    "codefix": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 38,
+     "runs": 40,
+     "pass_rate": 0.95
+    },
+    "implement": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 3,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 4,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 3,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 4,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.3466666666666667,
+   "cost_usd_list_price": 0.1737,
+   "infra_errors": 0,
+   "served_model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ]
+  },
+  "sonnet": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 147,
+   "pass_rate": 0.98,
+   "interval95": [
+    0.9428533167296139,
+    0.9931752486770326
+   ],
+   "task_bootstrap95": [
+    0.94,
+    1.0
+   ],
+   "one_run_range95": [
+    0.9333333333333333,
+    1.0
+   ],
+   "noise_share": 0.844671201814059,
+   "flip_rate": 0.06666666666666667,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 28,
+     "runs": 30,
+     "pass_rate": 0.9333333333333333
+    },
+    "codefix": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 39,
+     "runs": 40,
+     "pass_rate": 0.975
+    },
+    "implement": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 3,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.66,
+   "cost_usd_list_price": 1.8784,
+   "infra_errors": 0,
+   "served_model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ]
+  }
+ }
+}

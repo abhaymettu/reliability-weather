@@ -28,7 +28,7 @@ Code runs in which run-to-run noise was 50.1% of outcome variance.
 | --- | --- | --- |
 | Battery v1 | `battery/v1/*.py` | 30 tasks: 8 repairs, 8 implementations from a contract, 8 data jobs, 6 multi-file chores. Each has starting files, a prompt, a reference solution and a hidden check |
 | Harness | `weather/harness.py` | One JSON action per turn (list, read, write, run python3, finish), 4 turns, the same messages to every model |
-| Sandbox | `weather/sandbox.py` | Model-written code runs under `sandbox-exec`: no network, no reads of the home folder, writes only in the run's temp directory |
+| Sandbox | `weather/sandbox.py` | Model-written code runs under `sandbox-exec`, which blocks the network and the home folder and allows writes only in the run's temp directory |
 | Providers | `weather/providers.py` | Claude Sonnet and Haiku through `claude -p` with no tools; DeepSeek V4 Pro and Flash through the DeepSeek API |
 | Runner | `weather/run.py` | Runs a day, writes one receipt per run, skips runs that already have one, retries provider failures, stops at a daily cost cap |
 | Statistics | `weather/stats.py` | Wilson interval, Newcombe change test, exact one-run range, run-to-run variance share, flip rate |
@@ -54,15 +54,17 @@ never written anywhere else. `scripts/install-schedule.sh` installs the daily la
 
 ## What the numbers mean
 
-- **Pass rate**: passes over runs, 150 runs per model per day.
-- **95% interval**: Wilson score interval on those runs. Inference is about this battery, so the only randomness is
-  rerunning; pooling across tasks makes the interval conservative.
-- **One run could score**: the middle 95% of scores a single run per task would get, each task passing at its observed
-  rate. This is the spread a single-run leaderboard hides.
-- **Run-to-run share of variance**: of the variation in single-run outcomes, the part that comes from rerunning the same
-  model on the same task.
-- **Moved**: the 95% interval for the change since the last complete day excludes zero. Four models a day means about
-  one false alarm every five days.
+The pass rate is passes over runs, 150 runs per model per day. Its 95% interval is the Wilson score interval on those
+runs. Inference is about this battery, so the only randomness is rerunning, and pooling across tasks makes the
+interval conservative.
+
+"One run could score" is the middle 95% of scores a single run per task would get, each task passing at its observed
+rate. It is the spread a single-run leaderboard hides. The run-to-run share of variance is the part of the variation in
+single-run outcomes that comes from rerunning the same model on the same task, rather than from tasks differing in
+difficulty.
+
+A model has moved when the 95% interval for the change since its last complete day excludes zero. With four models a
+day, expect about one false alarm every five days.
 
 The 4-turn budget is part of what is measured: the battery asks for a correct change in few actions. At 10 turns the
 pilot passed 117 of 119 runs, which leaves nothing to measure; how the budget was chosen is in the preregistration.

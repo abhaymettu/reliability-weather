@@ -1,0 +1,213 @@
+{
+ "schema": 1,
+ "label": "2026-11-05",
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "repo_commit": "9ef495f67995faf0713fca63e190a96a38b8986e",
+ "model": "haiku",
+ "task": "fix_bisect",
+ "category": "codefix",
+ "run": 4,
+ "max_turns": 4,
+ "started_utc": "2026-11-05T10:39:43+00:00",
+ "python": "3.14.7",
+ "outcome": "fail",
+ "check_detail": "checker script failed (exit 1): Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n    assert 'bisect' not in pathlib.Path('search.py').read_text()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+ "ended": "finish",
+ "turns_used": 3,
+ "cost_usd": 0.000274665,
+ "finished_utc": "2026-11-05T10:39:51+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 962,
+    "output_tokens": 53,
+    "output_tokens_details": {
+     "thinking_tokens": 11
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 53,
+      "cache_read_input_tokens": 962,
+      "cache_creation_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2,
+     "outputTokens": 53,
+     "cacheReadInputTokens": 962,
+     "cacheCreationInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 3.6320000000000005e-05,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 11,
+     "cacheCreationEphemeral5mInputTokens": 0,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 3.6320000000000005e-05,
+   "session_id": "88160e7a-b8d5-4c11-ad3e-0ac15240a7bf",
+   "duration_ms": 918,
+   "cost_usd": 3.6320000000000005e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 183,
+    "cache_read_input_tokens": 962,
+    "output_tokens": 290,
+    "output_tokens_details": {
+     "thinking_tokens": 123
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 183
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 290,
+      "cache_read_input_tokens": 962,
+      "cache_creation_input_tokens": 183,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 183,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 4,
+     "outputTokens": 343,
+     "thinkingTokens": 134,
+     "cacheReadInputTokens": 1924,
+     "cacheCreationInputTokens": 183,
+     "cacheCreationEphemeral5mInputTokens": 183,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 0.00021401500000000002,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.00021401500000000002,
+   "session_id": "88160e7a-b8d5-4c11-ad3e-0ac15240a7bf",
+   "duration_ms": 2055,
+   "cost_usd": 0.000177695
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 340,
+    "cache_read_input_tokens": 1145,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 340
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 1145,
+      "cache_creation_input_tokens": 340,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 340,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 6,
+     "outputTokens": 356,
+     "thinkingTokens": 134,
+     "cacheReadInputTokens": 3069,
+     "cacheCreationInputTokens": 523,
+     "cacheCreationEphemeral5mInputTokens": 523,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 0.000274665,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.000274665,
+   "session_id": "88160e7a-b8d5-4c11-ad3e-0ac15240a7bf",
+   "duration_ms": 838,
+   "cost_usd": 6.0649999999999983e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "\n{\"action\": \"read\", \"path\": \"search.py\"}\n\n\n{\"action\": \"run\", \"args\": [\"search.py\"]}",
+   "result": "def insertion_point(xs, x):\n    lo, hi = 0, len(xs) - 1\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if xs[mid] <= x:\n            lo = mid + 1\n        else:\n            hi = mid\n    return lo\n"
+  },
+  {
+   "turn": 2,
+   "reply": "\n{\"action\": \"write\", \"path\": \"search.py\", \"content\": \"def insertion_point(xs, x):\\n    # Leftmost index i such that all xs[:i] < x and xs[i:] >= x (bisect_left contract).\\n    lo, hi = 0, len(xs)\\n    while lo < hi:\\n        mid = (lo + hi) // 2\\n        if xs[mid] < x:\\n            lo = mid + 1\\n        else:\\n            hi = mid\\n    return lo\\n\"}",
+   "result": "wrote search.py (286 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ]
+}

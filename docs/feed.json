@@ -37,7 +37,7 @@
  ],
  "runs_per_task_per_day": 5,
  "statistic": "pass rate over all runs; Wilson 95% interval; day-over-day change by Newcombe's hybrid score interval (PREREGISTRATION.md section 4)",
- "generated_utc": "2026-11-05T10:47:07+00:00",
+ "generated_utc": "2026-11-06T10:45:59+00:00",
  "models": {
   "sonnet": {
    "name": "Claude Sonnet",
@@ -60,7 +60,7 @@
    "shape": "triangle"
   }
  },
- "latest": "2026-11-05",
+ "latest": "2026-11-06",
  "days": [
   {
    "date": "2026-11-04",
@@ -1316,6 +1316,566 @@
       "interval95": [
        -0.029772199958424672,
        0.04505116337439551
+      ],
+      "moved": false
+     }
+    }
+   }
+  },
+  {
+   "date": "2026-11-06",
+   "models": {
+    "deepseek-flash": {
+     "tasks": 30,
+     "runs": 150,
+     "passes": 128,
+     "pass_rate": 0.8533333333333334,
+     "interval95": [
+      0.7879153994391072,
+      0.9011056278741189
+     ],
+     "task_bootstrap95": [
+      0.76,
+      0.9333333333333333
+     ],
+     "one_run_range95": [
+      0.7333333333333333,
+      0.9666666666666667
+     ],
+     "noise_share": 0.8465909090909092,
+     "flip_rate": 0.4,
+     "complete": true,
+     "by_category": {
+      "chore": {
+       "passes": 22,
+       "runs": 30,
+       "pass_rate": 0.7333333333333333
+      },
+      "codefix": {
+       "passes": 38,
+       "runs": 40,
+       "pass_rate": 0.95
+      },
+      "data": {
+       "passes": 28,
+       "runs": 40,
+       "pass_rate": 0.7
+      },
+      "implement": {
+       "passes": 40,
+       "runs": 40,
+       "pass_rate": 1.0
+      }
+     },
+     "tasks_detail": {
+      "chore_add_cli": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_circular_import": {
+       "passes": 3,
+       "runs": 5
+      },
+      "chore_rename": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_split_module": {
+       "passes": 3,
+       "runs": 5
+      },
+      "chore_tests_green": {
+       "passes": 4,
+       "runs": 5
+      },
+      "chore_version_bump": {
+       "passes": 2,
+       "runs": 5
+      },
+      "data_config_merge": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_dedupe_contacts": {
+       "passes": 3,
+       "runs": 5
+      },
+      "data_find_todos": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_inventory": {
+       "passes": 3,
+       "runs": 5
+      },
+      "data_join_orders": {
+       "passes": 3,
+       "runs": 5
+      },
+      "data_log_errors": {
+       "passes": 2,
+       "runs": 5
+      },
+      "data_markdown_table": {
+       "passes": 4,
+       "runs": 5
+      },
+      "data_sales_totals": {
+       "passes": 3,
+       "runs": 5
+      },
+      "fix_bisect": {
+       "passes": 4,
+       "runs": 5
+      },
+      "fix_csv_line": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_days_between": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_dedupe": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_flatten": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_median": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_roman": {
+       "passes": 4,
+       "runs": 5
+      },
+      "fix_word_count": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_balanced": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_duration": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_lru": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_luhn": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_merge_intervals": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_rle": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_semver": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_slugify": {
+       "passes": 5,
+       "runs": 5
+      }
+     },
+     "mean_turns": 3.8066666666666666,
+     "cost_usd_list_price": 0.127,
+     "infra_errors": 0,
+     "runs_with_refused_outside_write": 0,
+     "failed_runs_with_refused_outside_write": 0,
+     "served_model_ids": [
+      "deepseek-flash"
+     ],
+     "battery_sha256": [
+      "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+     ],
+     "change": {
+      "vs": "2026-11-05",
+      "diff": 0.01333333333333342,
+      "interval95": [
+       -0.06904082069604352,
+       0.0956529002294377
+      ],
+      "moved": false
+     }
+    },
+    "haiku": {
+     "tasks": 30,
+     "runs": 150,
+     "passes": 148,
+     "pass_rate": 0.9866666666666667,
+     "interval95": [
+      0.9526930912996325,
+      0.9963358708487731
+     ],
+     "task_bootstrap95": [
+      0.9466666666666667,
+      1.0
+     ],
+     "one_run_range95": [
+      0.9666666666666667,
+      1.0
+     ],
+     "noise_share": 0.7550675675675675,
+     "flip_rate": 0.03333333333333333,
+     "complete": true,
+     "by_category": {
+      "chore": {
+       "passes": 28,
+       "runs": 30,
+       "pass_rate": 0.9333333333333333
+      },
+      "codefix": {
+       "passes": 40,
+       "runs": 40,
+       "pass_rate": 1.0
+      },
+      "data": {
+       "passes": 40,
+       "runs": 40,
+       "pass_rate": 1.0
+      },
+      "implement": {
+       "passes": 40,
+       "runs": 40,
+       "pass_rate": 1.0
+      }
+     },
+     "tasks_detail": {
+      "chore_add_cli": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_circular_import": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_rename": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_split_module": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_tests_green": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_version_bump": {
+       "passes": 3,
+       "runs": 5
+      },
+      "data_config_merge": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_dedupe_contacts": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_find_todos": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_inventory": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_join_orders": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_log_errors": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_markdown_table": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_sales_totals": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_bisect": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_csv_line": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_days_between": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_dedupe": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_flatten": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_median": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_roman": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_word_count": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_balanced": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_duration": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_lru": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_luhn": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_merge_intervals": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_rle": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_semver": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_slugify": {
+       "passes": 5,
+       "runs": 5
+      }
+     },
+     "mean_turns": 3.2933333333333334,
+     "cost_usd_list_price": 0.139,
+     "infra_errors": 0,
+     "runs_with_refused_outside_write": 13,
+     "failed_runs_with_refused_outside_write": 1,
+     "served_model_ids": [
+      "claude-haiku-5-5"
+     ],
+     "battery_sha256": [
+      "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+     ],
+     "change": {
+      "vs": "2026-11-05",
+      "diff": 0.00666666666666671,
+      "interval95": [
+       -0.029772199958424672,
+       0.04505116337439551
+      ],
+      "moved": false
+     }
+    },
+    "sonnet": {
+     "tasks": 30,
+     "runs": 150,
+     "passes": 146,
+     "pass_rate": 0.9733333333333333,
+     "interval95": [
+      0.9334461094878556,
+      0.989582059177032
+     ],
+     "task_bootstrap95": [
+      0.9266666666666666,
+      1.0
+     ],
+     "one_run_range95": [
+      0.9333333333333333,
+      1.0
+     ],
+     "noise_share": 0.8929794520547943,
+     "flip_rate": 0.1,
+     "complete": true,
+     "by_category": {
+      "chore": {
+       "passes": 28,
+       "runs": 30,
+       "pass_rate": 0.9333333333333333
+      },
+      "codefix": {
+       "passes": 40,
+       "runs": 40,
+       "pass_rate": 1.0
+      },
+      "data": {
+       "passes": 38,
+       "runs": 40,
+       "pass_rate": 0.95
+      },
+      "implement": {
+       "passes": 40,
+       "runs": 40,
+       "pass_rate": 1.0
+      }
+     },
+     "tasks_detail": {
+      "chore_add_cli": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_circular_import": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_rename": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_split_module": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_tests_green": {
+       "passes": 5,
+       "runs": 5
+      },
+      "chore_version_bump": {
+       "passes": 3,
+       "runs": 5
+      },
+      "data_config_merge": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_dedupe_contacts": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_find_todos": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_inventory": {
+       "passes": 4,
+       "runs": 5
+      },
+      "data_join_orders": {
+       "passes": 4,
+       "runs": 5
+      },
+      "data_log_errors": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_markdown_table": {
+       "passes": 5,
+       "runs": 5
+      },
+      "data_sales_totals": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_bisect": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_csv_line": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_days_between": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_dedupe": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_flatten": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_median": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_roman": {
+       "passes": 5,
+       "runs": 5
+      },
+      "fix_word_count": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_balanced": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_duration": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_lru": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_luhn": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_merge_intervals": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_rle": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_semver": {
+       "passes": 5,
+       "runs": 5
+      },
+      "impl_slugify": {
+       "passes": 5,
+       "runs": 5
+      }
+     },
+     "mean_turns": 3.7333333333333334,
+     "cost_usd_list_price": 1.3309,
+     "infra_errors": 0,
+     "runs_with_refused_outside_write": 0,
+     "failed_runs_with_refused_outside_write": 0,
+     "served_model_ids": [
+      "claude-sonnet-5-5"
+     ],
+     "battery_sha256": [
+      "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+     ],
+     "change": {
+      "vs": "2026-11-05",
+      "diff": -0.013333333333333308,
+      "interval95": [
+       -0.05437580079832033,
+       0.024325993728673924
       ],
       "moved": false
      }

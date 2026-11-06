@@ -1,0 +1,276 @@
+{
+ "schema": 1,
+ "label": "2026-11-06",
+ "battery": "v1",
+ "battery_sha256": "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe",
+ "repo_commit": "af731cbc0612a3a65a34cf4d7abf8c79186dd605",
+ "model": "haiku",
+ "task": "data_markdown_table",
+ "category": "data",
+ "run": 3,
+ "max_turns": 4,
+ "started_utc": "2026-11-06T10:40:35+00:00",
+ "python": "3.14.7",
+ "outcome": "pass",
+ "check_detail": "table.md matches",
+ "ended": "finish",
+ "turns_used": 4,
+ "cost_usd": 0.001313415,
+ "finished_utc": "2026-11-06T10:40:48+00:00",
+ "calls": [
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1053,
+    "output_tokens": 51,
+    "output_tokens_details": {
+     "thinking_tokens": 32
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 51,
+      "cache_read_input_tokens": 1053,
+      "cache_creation_input_tokens": 0,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 2,
+     "outputTokens": 51,
+     "cacheReadInputTokens": 1053,
+     "cacheCreationInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 3.623e-05,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 32,
+     "cacheCreationEphemeral5mInputTokens": 0,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 3.623e-05,
+   "session_id": "ad1b5d57-c959-4457-a285-27af348d888d",
+   "duration_ms": 751,
+   "cost_usd": 3.623e-05
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 205,
+    "cache_read_input_tokens": 1053,
+    "output_tokens": 1675,
+    "output_tokens_details": {
+     "thinking_tokens": 1436
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 205
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1675,
+      "cache_read_input_tokens": 1053,
+      "cache_creation_input_tokens": 205,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 205,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 4,
+     "outputTokens": 1726,
+     "thinkingTokens": 1468,
+     "cacheReadInputTokens": 2106,
+     "cacheCreationInputTokens": 205,
+     "cacheCreationEphemeral5mInputTokens": 205,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 0.0009100850000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0009100850000000001,
+   "session_id": "ad1b5d57-c959-4457-a285-27af348d888d",
+   "duration_ms": 7048,
+   "cost_usd": 0.0008738550000000002
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1727,
+    "cache_read_input_tokens": 1258,
+    "output_tokens": 174,
+    "output_tokens_details": {
+     "thinking_tokens": 150
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 1727
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 174,
+      "cache_read_input_tokens": 1258,
+      "cache_creation_input_tokens": 1727,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 1727,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 6,
+     "outputTokens": 1900,
+     "thinkingTokens": 1618,
+     "cacheReadInputTokens": 3364,
+     "cacheCreationInputTokens": 1932,
+     "cacheCreationEphemeral5mInputTokens": 1932,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 0.0012257400000000001,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.0012257400000000001,
+   "session_id": "ad1b5d57-c959-4457-a285-27af348d888d",
+   "duration_ms": 1447,
+   "cost_usd": 0.00031565499999999997
+  },
+  {
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 409,
+    "cache_read_input_tokens": 2985,
+    "output_tokens": 13,
+    "output_tokens_details": {
+     "thinking_tokens": 0
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 409
+    },
+    "inference_geo": "global",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 13,
+      "cache_read_input_tokens": 2985,
+      "cache_creation_input_tokens": 409,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 409,
+       "ephemeral_1h_input_tokens": 0
+      },
+      "type": "message"
+     }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+   },
+   "modelUsage": {
+    "claude-haiku-5-5": {
+     "inputTokens": 8,
+     "outputTokens": 1913,
+     "thinkingTokens": 1618,
+     "cacheReadInputTokens": 6349,
+     "cacheCreationInputTokens": 2341,
+     "cacheCreationEphemeral5mInputTokens": 2341,
+     "cacheCreationEphemeral1hInputTokens": 0,
+     "webSearchRequests": 0,
+     "costUSD": 0.001313415,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "canonicalModel": "claude-haiku-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   },
+   "total_cost_usd": 0.001313415,
+   "session_id": "ad1b5d57-c959-4457-a285-27af348d888d",
+   "duration_ms": 762,
+   "cost_usd": 8.767499999999995e-05
+  }
+ ],
+ "transcript": [
+  {
+   "turn": 1,
+   "reply": "{\"action\": \"read\", \"path\": \"table.csv\"}",
+   "result": "item,qty,price,note\nitem-1,10,99.27,x|y\nitem-2,476,54.95,x|y\nitem-3,384,87.39,fragile\nitem-4,339,0.32,x|y\nitem-5,454,86.43,x|y\nitem-6,429,50.10,\nitem-7,251,76.58,\nitem-8,325,11.21,fragile\n"
+  },
+  {
+   "turn": 2,
+   "reply": "{\"action\": \"write\", \"path\": \"table.md\", \"content\": \"| item   | qty | price | note    |\\n| ------ | --: | ----: | ------- |\\n| item-1 |  10 | 99.27 | x\\\\|y    |\\n| item-2 | 476 | 54.95 | x\\\\|y    |\\n| item-3 | 384 | 87.39 | fragile |\\n| item-4 | 339 |  0.32 | x\\\\|y    |\\n| item-5 | 454 | 86.43 | x\\\\|y    |\\n| item-6 | 429 | 50.10 |         |\\n| item-7 | 251 | 76.58 |         |\\n| item-8 | 325 | 11.21 | fragile |\\n\"}",
+   "result": "wrote table.md (350 chars)"
+  },
+  {
+   "turn": 3,
+   "reply": "{\"action\": \"read\", \"path\": \"table.md\"}",
+   "result": "| item   | qty | price | note    |\n| ------ | --: | ----: | ------- |\n| item-1 |  10 | 99.27 | x\\|y    |\n| item-2 | 476 | 54.95 | x\\|y    |\n| item-3 | 384 | 87.39 | fragile |\n| item-4 | 339 |  0.32 | x\\|y    |\n| item-5 | 454 | 86.43 | x\\|y    |\n| item-6 | 429 | 50.10 |         |\n| item-7 | 251 | 76.58 |         |\n| item-8 | 325 | 11.21 | fragile |\n"
+  },
+  {
+   "turn": 4,
+   "reply": "{\"action\": \"finish\"}",
+   "result": null
+  }
+ ]
+}

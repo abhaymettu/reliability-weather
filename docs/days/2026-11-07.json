@@ -1,0 +1,560 @@
+{
+ "date": "2026-11-07",
+ "models": {
+  "deepseek-flash": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 131,
+   "pass_rate": 0.8733333333333333,
+   "interval95": [
+    0.8106335124178631,
+    0.9173887051206396
+   ],
+   "task_bootstrap95": [
+    0.78,
+    0.9533333333333334
+   ],
+   "one_run_range95": [
+    0.7666666666666667,
+    0.9666666666666667
+   ],
+   "noise_share": 0.7183607874648453,
+   "flip_rate": 0.36666666666666664,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 26,
+     "runs": 30,
+     "pass_rate": 0.8666666666666667
+    },
+    "codefix": {
+     "passes": 39,
+     "runs": 40,
+     "pass_rate": 0.975
+    },
+    "data": {
+     "passes": 27,
+     "runs": 40,
+     "pass_rate": 0.675
+    },
+    "implement": {
+     "passes": 39,
+     "runs": 40,
+     "pass_rate": 0.975
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 4,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 4,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 3,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 3,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 1,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 1,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 4,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 4,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.78,
+   "cost_usd_list_price": 0.1344,
+   "infra_errors": 0,
+   "runs_with_refused_outside_write": 0,
+   "failed_runs_with_refused_outside_write": 0,
+   "served_model_ids": [
+    "deepseek-flash"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ],
+   "change": {
+    "vs": "2026-11-06",
+    "diff": 0.019999999999999907,
+    "interval95": [
+     -0.058825501384536794,
+     0.09886939747650622
+    ],
+    "moved": false
+   }
+  },
+  "haiku": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 145,
+   "pass_rate": 0.9666666666666667,
+   "interval95": [
+    0.9243482038212211,
+    0.9856795681019074
+   ],
+   "task_bootstrap95": [
+    0.9066666666666666,
+    1.0
+   ],
+   "one_run_range95": [
+    0.9333333333333333,
+    1.0
+   ],
+   "noise_share": 0.6165517241379311,
+   "flip_rate": 0.06666666666666667,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 25,
+     "runs": 30,
+     "pass_rate": 0.8333333333333334
+    },
+    "codefix": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "implement": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 3,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 2,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.28,
+   "cost_usd_list_price": 0.1311,
+   "infra_errors": 0,
+   "runs_with_refused_outside_write": 9,
+   "failed_runs_with_refused_outside_write": 3,
+   "served_model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ],
+   "change": {
+    "vs": "2026-11-06",
+    "diff": -0.020000000000000018,
+    "interval95": [
+     -0.06340905213335837,
+     0.018931918064818316
+    ],
+    "moved": false
+   }
+  },
+  "sonnet": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 145,
+   "pass_rate": 0.9666666666666667,
+   "interval95": [
+    0.9243482038212211,
+    0.9856795681019074
+   ],
+   "task_bootstrap95": [
+    0.9066666666666666,
+    1.0
+   ],
+   "one_run_range95": [
+    0.9333333333333333,
+    1.0
+   ],
+   "noise_share": 0.6165517241379311,
+   "flip_rate": 0.06666666666666667,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 27,
+     "runs": 30,
+     "pass_rate": 0.9
+    },
+    "codefix": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 38,
+     "runs": 40,
+     "pass_rate": 0.95
+    },
+    "implement": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 2,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 3,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.7133333333333334,
+   "cost_usd_list_price": 1.2189,
+   "infra_errors": 0,
+   "runs_with_refused_outside_write": 1,
+   "failed_runs_with_refused_outside_write": 1,
+   "served_model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ],
+   "change": {
+    "vs": "2026-11-06",
+    "diff": -0.00666666666666671,
+    "interval95": [
+     -0.051997377990724264,
+     0.03752022106131695
+    ],
+    "moved": false
+   }
+  }
+ }
+}

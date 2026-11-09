@@ -1,13 +1,13 @@
 # reliability weather
 
 <!-- weather:start -->
-**November 8, 2026. Claude Sonnet passed 99% of its 149 runs (95% interval 95 to 100). Run the same 30 tasks once instead of 5 times and DeepSeek Flash could have scored anywhere from 73% to 93%.**
+**November 9, 2026. Claude Haiku passed 98% of its 150 runs (95% interval 94 to 99). Run the same 30 tasks once instead of 5 times and DeepSeek Flash could have scored anywhere from 73% to 93%.**
 
 | Model | Pass rate | 95% interval | One run could score | Tasks that flipped |
 | --- | --- | --- | --- | --- |
-| Claude Sonnet | 99% | 95 to 100 | 93 to 100 | 2 of 30 |
-| Claude Haiku | 98% | 94 to 99 | 93 to 100 | 2 of 30 |
-| DeepSeek Flash | 83% | 76 to 88 | 73 to 93 | 12 of 30 |
+| Claude Haiku | 98% | 94 to 99 | 93 to 100 | 3 of 30 |
+| Claude Sonnet | 97% | 93 to 99 | 97 to 100 | 1 of 30 |
+| DeepSeek Flash | 83% | 77 to 88 | 73 to 93 | 12 of 30 |
 <!-- weather:end -->
 
 **[Today's page](https://abhaymettu.github.io/reliability-weather/)** · [feed.json](https://abhaymettu.github.io/reliability-weather/feed.json) · [preregistration](PREREGISTRATION.md)

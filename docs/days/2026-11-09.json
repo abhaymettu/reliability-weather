@@ -1,0 +1,560 @@
+{
+ "date": "2026-11-09",
+ "models": {
+  "deepseek-flash": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 125,
+   "pass_rate": 0.8333333333333334,
+   "interval95": [
+    0.7655341358309921,
+    0.884485701256957
+   ],
+   "task_bootstrap95": [
+    0.7266666666666666,
+    0.9266666666666666
+   ],
+   "one_run_range95": [
+    0.7333333333333333,
+    0.9333333333333333
+   ],
+   "noise_share": 0.6675199999999999,
+   "flip_rate": 0.4,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 18,
+     "runs": 30,
+     "pass_rate": 0.6
+    },
+    "codefix": {
+     "passes": 39,
+     "runs": 40,
+     "pass_rate": 0.975
+    },
+    "data": {
+     "passes": 29,
+     "runs": 40,
+     "pass_rate": 0.725
+    },
+    "implement": {
+     "passes": 39,
+     "runs": 40,
+     "pass_rate": 0.975
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 3,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 1,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 2,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 2,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 1,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 2,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 4,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 4,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.7866666666666666,
+   "cost_usd_list_price": 0.1231,
+   "infra_errors": 0,
+   "runs_with_refused_outside_write": 0,
+   "failed_runs_with_refused_outside_write": 0,
+   "served_model_ids": [
+    "deepseek-flash"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ],
+   "change": {
+    "vs": "2026-11-08",
+    "diff": 0.00666666666666671,
+    "interval95": [
+     -0.07890726239429395,
+     0.09217958286762631
+    ],
+    "moved": false
+   }
+  },
+  "haiku": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 147,
+   "pass_rate": 0.98,
+   "interval95": [
+    0.9428533167296139,
+    0.9931752486770326
+   ],
+   "task_bootstrap95": [
+    0.9466666666666668,
+    1.0
+   ],
+   "one_run_range95": [
+    0.9333333333333333,
+    1.0
+   ],
+   "noise_share": 1.0,
+   "flip_rate": 0.1,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 27,
+     "runs": 30,
+     "pass_rate": 0.9
+    },
+    "codefix": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "implement": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 4,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 4,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 4,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.3,
+   "cost_usd_list_price": 0.1263,
+   "infra_errors": 0,
+   "runs_with_refused_outside_write": 7,
+   "failed_runs_with_refused_outside_write": 1,
+   "served_model_ids": [
+    "claude-haiku-5-5"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ],
+   "change": {
+    "vs": "2026-11-08",
+    "diff": 0.0,
+    "interval95": [
+     -0.0394139982200744,
+     0.0394139982200744
+    ],
+    "moved": false
+   }
+  },
+  "sonnet": {
+   "tasks": 30,
+   "runs": 150,
+   "passes": 146,
+   "pass_rate": 0.9733333333333333,
+   "interval95": [
+    0.9334461094878556,
+    0.989582059177032
+   ],
+   "task_bootstrap95": [
+    0.9066666666666666,
+    1.0
+   ],
+   "one_run_range95": [
+    0.9666666666666667,
+    1.0
+   ],
+   "noise_share": 0.2551369863013699,
+   "flip_rate": 0.03333333333333333,
+   "complete": true,
+   "by_category": {
+    "chore": {
+     "passes": 26,
+     "runs": 30,
+     "pass_rate": 0.8666666666666667
+    },
+    "codefix": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "data": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    },
+    "implement": {
+     "passes": 40,
+     "runs": 40,
+     "pass_rate": 1.0
+    }
+   },
+   "tasks_detail": {
+    "chore_add_cli": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_circular_import": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_rename": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_split_module": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_tests_green": {
+     "passes": 5,
+     "runs": 5
+    },
+    "chore_version_bump": {
+     "passes": 1,
+     "runs": 5
+    },
+    "data_config_merge": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_dedupe_contacts": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_find_todos": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_inventory": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_join_orders": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_log_errors": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_markdown_table": {
+     "passes": 5,
+     "runs": 5
+    },
+    "data_sales_totals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_bisect": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_csv_line": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_days_between": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_dedupe": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_flatten": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_median": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_roman": {
+     "passes": 5,
+     "runs": 5
+    },
+    "fix_word_count": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_balanced": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_duration": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_lru": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_luhn": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_merge_intervals": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_rle": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_semver": {
+     "passes": 5,
+     "runs": 5
+    },
+    "impl_slugify": {
+     "passes": 5,
+     "runs": 5
+    }
+   },
+   "mean_turns": 3.66,
+   "cost_usd_list_price": 1.338,
+   "infra_errors": 0,
+   "runs_with_refused_outside_write": 0,
+   "failed_runs_with_refused_outside_write": 0,
+   "served_model_ids": [
+    "claude-sonnet-5-5"
+   ],
+   "battery_sha256": [
+    "b407a8cf9f16863d670d00d6aa27b846f4ec301dd8485bae4625d672a3bb0ffe"
+   ],
+   "change": {
+    "vs": "2026-11-07",
+    "diff": 0.00666666666666671,
+    "interval95": [
+     -0.03752022106131695,
+     0.051997377990724264
+    ],
+    "moved": false
+   }
+  }
+ }
+}
